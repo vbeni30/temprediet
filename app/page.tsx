@@ -89,14 +89,14 @@ export default function HomePage() {
                 title: "sKINs: East Ethiopia Textile Installation",
                 year: "2024",
                 medium: "Textile Installation",
-                image: "/images/webp/02_installations/01_sKINs_East_ Ethiopia_textile_installation/01_front.webp",
+                image: "/images/webp/02_installations/01_sKINs_East_Ethiopia_textile_installation/01_front.webp",
                 href: "/projects/installation",
               },
               {
                 title: "Bet Bota",
                 year: "2022",
                 medium: "Installation",
-                image: "/images/webp/02_installations/03_Bet Bota_photos_2022/a4a.webp",
+                image: "/images/webp/02_installations/03_Bet_Bota_photos_2022/a4a.webp",
                 href: "/projects/films",
               },
               {
