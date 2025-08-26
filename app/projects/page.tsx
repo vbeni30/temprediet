@@ -452,8 +452,8 @@ const allProjectsData = [
       "A photographic series exploring the color red in Ethiopian culture, from traditional clothing to landscapes.",
     detailedDescription:
       "This photographic series documents the significance of red in Ethiopian culture, capturing everything from traditional red clothing and ceremonial objects to natural red landscapes and architectural elements. Contains 7 striking photographs that reveal the deep cultural meanings and emotional associations of this powerful color.",
-    image: "/public/images/webp/05_Archive/03_In_red/a1.webp",
-    featured: false, 
+    image: "/images/webp/05_Archive/a1.webp?height=600&width=800&text=In+Red+Archive",
+    featured: false,
     awards: [],
     visitors: "6K",
     tags: ["color study", "cultural significance", "photography", "red"],
