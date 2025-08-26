@@ -116,7 +116,7 @@ const allProjectsData = [
     description: "YAL / Ye Abayn Lij explores ritual and design, named for the paradox of lacking one's own abundance.",
     detailedDescription:
       "This studio-based work involves extensive field research and documentation of cultural practices related to body modification, traditional scarification, and ceremonial body art in Northern Ethiopian communities. The project serves as both artistic exploration and cultural preservation, creating a visual archive of practices that connect contemporary Ethiopian identity to ancestral traditions.",
-    image: "/placeholder.svg?height=600&width=800&text=YAL+Studio",
+    image: "images/webp/03_In studyo/YAL/YAL project photo.webp?height=600&width=800&text=YAL+Studio",
     featured: false,
     awards: [],
     visitors: "8K",
@@ -134,7 +134,7 @@ const allProjectsData = [
       "The Sheret/Sarong is a tubular textile from Indonesia, used in East Africa for hot climates, rituals, and protection, and to wrap fallen soldiers.",
     detailedDescription:
       "This studio-based work involves extensive field research and documentation of cultural practices related to body modification, traditional scarification, and ceremonial body art in Northern Ethiopian communities. The project serves as both artistic exploration and cultural preservation, creating a visual archive of practices that connect contemporary Ethiopian identity to ancestral traditions.",
-    image: "/placeholder.svg?height=600&width=800&text=Sheret+Project",
+    image: "/images/webp/03_In studyo/Sheret Projects/b.webp?height=600&width=800&text=Sheret+Project",
     featured: false,
     awards: [],
     visitors: "5K",
