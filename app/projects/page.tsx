@@ -33,7 +33,7 @@ const allProjectsData = [
       "An immersive textile installation exploring the relationship between skin, fabric, and cultural identity in Eastern Ethiopia.",
     detailedDescription:
       "This large-scale installation features traditional textiles from Eastern Ethiopia arranged in a contemporary gallery context, creating dialogue between historical textile practices and modern artistic expression. The work transforms gallery space into a meditation on cultural memory and material heritage. Currently available for sale, this installation represents the culmination of extensive research into Ethiopian textile traditions.",
-    image: "/images/webp/02_installations/01_sKINs_East Ethiopia textile installation/01_front.webp",
+    image: "/images/webp/02_installations/01_sKINs_East_ Ethiopia_textile_installation/01_front.webp",
     featured: true,
     awards: ["Installation of the Year 2025"],
     visitors: "25K",
@@ -452,8 +452,8 @@ const allProjectsData = [
       "A photographic series exploring the color red in Ethiopian culture, from traditional clothing to landscapes.",
     detailedDescription:
       "This photographic series documents the significance of red in Ethiopian culture, capturing everything from traditional red clothing and ceremonial objects to natural red landscapes and architectural elements. Contains 7 striking photographs that reveal the deep cultural meanings and emotional associations of this powerful color.",
-    image: "/images/webp/05_Archive/a1.webp?height=600&width=800&text=In+Red+Archive",
-    featured: false,
+    image: "/public/images/webp/05_Archive/03_In_red/a1.webp",
+    featured: false, 
     awards: [],
     visitors: "6K",
     tags: ["color study", "cultural significance", "photography", "red"],
