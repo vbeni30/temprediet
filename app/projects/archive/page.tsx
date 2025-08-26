@@ -75,7 +75,7 @@ const archiveProjects: Project[] = [
       "A photographic series exploring the color red in Ethiopian culture, from traditional clothing to landscapes.",
     detailedDescription:
       "This photographic series documents the significance of red in Ethiopian culture, capturing everything from traditional red clothing and ceremonial objects to natural red landscapes and architectural elements. Contains 7 striking photographs that reveal the deep cultural meanings and emotional associations of this powerful color.",
-    image: "/images/webp/05_Archive/03_In red/a1.webp?height=600&width=800&text=In+Red+Archive",
+    image: "/images/webp/05_Archive/03_In_red/a1.webp?height=600&width=800&text=In+Red+Archive",
     location: "Various locations",
     status: "Artistic Archive",
     tags: ["color study", "cultural significance", "photography", "red"],
