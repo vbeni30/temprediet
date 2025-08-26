@@ -36,7 +36,7 @@ const installationProjects: InstallationProject[] = [
       "An immersive textile installation and film screening exploring the r/s between skin, fabric, and cultural identity in Eastern Ethiopia.",
     detailedDescription:
       "This large-scale installation features traditional textiles from Eastern Ethiopia arranged in a contemporary gallery context, creating dialogue between historical textile practices and modern artistic expression. The work transforms gallery space into a meditation on cultural memory and material heritage. Currently available for sale, this installation represents the culmination of extensive research into Ethiopian textile traditions.",
-    image: "/images/webp/02_Installations/01_sKINs_East_ Ethiopia_textile_installation/01_front.webp?height=600&width=800&text=sKINs+East+Ethiopia+Installation",
+    image: "/images/webp/02_Installations/01_sKINs_East_Ethiopia_textile_installation/01_front.webp?height=600&width=800&text=sKINs+East+Ethiopia+Installation",
     position: "Textile Artist, Director, Producer, Cinematographer, Writer",
     materials: ["Traditional textiles", "Contemporary display systems", "Lighting", "Sound"],
     tags: ["textile", "identity", "cultural heritage", "for sale"],
@@ -58,7 +58,7 @@ const installationProjects: InstallationProject[] = [
       "“YAL / Ye Abayn Lij” explores ritual and design, named for the paradox of lacking one’s own abundance.",
     detailedDescription:
       "The YAL (Young African Leaders) exhibition features multimedia installations that examine leadership, youth culture, and artistic innovation in modern Ethiopia. The exhibition includes 17 distinct photographic works alongside an immersive walkthrough video experience that guides viewers through the conceptual framework of contemporary Ethiopian artistic practice.",
-    image: "/images/webp/02_installations/02_YAL exhibition_photos_2025/IMG_2859.webp?height=600&width=800&text=YAL+Exhibition",
+    image: "/images/webp/02_installations/02_YAL_exhibition_photos_2025/IMG_2859.webp?height=600&width=800&text=YAL+Exhibition",
     position: "Textile Artist and curator ",
     materials: ["Photography", "Video installations", "Interactive displays", "Sound systems"],
     tags: ["contemporary", "multimedia", "youth", "leadership"],
@@ -75,7 +75,7 @@ const installationProjects: InstallationProject[] = [
       "“Bet/Bota” reimagines the Ethiopian home, exploring memory and history through immersive sets and everyday objects.",
     detailedDescription:
       "“Bet/Bota” reimagines the Ethiopian home as a space where memory and history intersect with imagination. Set against 1970s Addis Ababa, the project unfolds through eight immersive sets ranging from elemental abstractions to reconstructed living spaces. At its heart, a dining room unites these worlds, revealing the quiet power of everyday objects. Both house and archive, “Bet/Bota” invites reflection on how space shapes us, and how we, in turn, shape space.",
-    image: "/images/webp/02_installations/03_Bet Bota_photos_2022/a4a.webp?height=600&width=800&text=Bet+Bota+Installation",
+    image: "/images/webp/02_installations/03_Bet_Bota_photos_2022/a4a.webp?height=600&width=800&text=Bet+Bota+Installation",
     position: "Model, Director",
     materials: ["Traditional textiles", "Architectural elements", "Lighting systems", "Interactive spaces"],
     tags: ["architecture", "domestic", "cultural memory", "space"],
@@ -92,7 +92,7 @@ const installationProjects: InstallationProject[] = [
       "“Hulet Neteb / Two Dots” uses the Ethiopian “:” to explore identity and heritage through hand-painted and pre-owned garments.",
     detailedDescription:
       "Building on the themes from the experimental film of the same name, this installation creates an immersive environment where visitors can physically engage with the concept of 'Hulet Neteb' (two things). The work demonstrates how philosophical concepts can be experienced through spatial and tactile engagement, documented through 7 comprehensive photographs.",
-    image: "/images/webp/02_installations/04_Hulet Neteb Photos_2022/IMG_4342.webp?height=600&width=800&text=Hulet+Neteb+Installation",
+    image: "/images/webp/02_installations/04_Hulet_Neteb_Photos_2022/IMG_4342.webp?height=600&width=800&text=Hulet+Neteb+Installation",
     position: "Director, Producer, Curator, and Textile Artist",
     materials: ["Interactive sensors", "Digital displays", "Physical objects", "Sound design"],
     tags: ["interactive", "philosophy", "duality", "digital"],
@@ -110,7 +110,7 @@ const installationProjects: InstallationProject[] = [
     description: "“Ete’ya” reimagines traditional Ethiopian attire with a blue cloak, red pants, and headscarf, honoring the legendary queen.",
     detailedDescription:
       "Created during the prestigious Gojo residency program, this immersive work combines video, sound, textile, and sculptural elements to create an environment where visitors can experience legendary narratives through multiple sensory channels. The installation demonstrates how traditional storytelling can be transformed through contemporary artistic methodologies, documented through 9 comprehensive photographs.",
-    image: "/images/webp/02_installations/05_Decoding legends/IMG_5082.webp?height=600&width=800&text=Decoding+Legends+Installation",
+    image: "/images/webp/02_installations/05_Decoding_legends/IMG_5082.webp?height=600&width=800&text=Decoding+Legends+Installation",
     position: "Creative director, costume design",
     materials: ["Video screens", "Traditional artifacts", "Audio systems", "Lighting", "Textiles"],
     tags: ["legends", "multimedia", "storytelling", "gojo residency"],
