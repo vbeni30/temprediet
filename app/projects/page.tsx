@@ -362,7 +362,7 @@ const allProjectsData = [
       "Hulet Neteb / Two Dots uses the Ethiopian ':' to explore identity and heritage through hand-painted and pre-owned garments.",
     detailedDescription:
       "Building on the themes from the experimental film of the same name, this installation creates an immersive environment where visitors can physically engage with the concept of 'Hulet Neteb' (two things). The work demonstrates how philosophical concepts can be experienced through spatial and tactile engagement, documented through 7 comprehensive photographs.",
-    image: "/placeholder.svg?height=600&width=800&text=Hulet+Neteb+Installation+1",
+    image: "/images/webp/02_installations/04_Hulet Neteb Photos_2022/IMG_4342.webp?height=600&width=800&text=Hulet+Neteb+Installation+1",
     featured: false,
     awards: [],
     visitors: "8K",
@@ -385,7 +385,7 @@ const allProjectsData = [
       "Hulet Neteb / Two Dots uses the Ethiopian ':' to explore identity and heritage through hand-painted and pre-owned garments.",
     detailedDescription:
       "This studio-based work involves extensive field research and documentation of cultural practices related to body modification, traditional scarification, and ceremonial body art in Northern Ethiopian communities. The project serves as both artistic exploration and cultural preservation, creating a visual archive of practices that connect contemporary Ethiopian identity to ancestral traditions.",
-    image: "/placeholder.svg?height=600&width=800&text=Hulet+Neteb+Project",
+    image: "/images/webp/03_In studyo/Hulet neteb project photos/FUA10675.webp?height=600&width=800&text=Hulet+Neteb+Project",
     featured: false,
     awards: [],
     visitors: "7K",
@@ -452,7 +452,7 @@ const allProjectsData = [
       "A photographic series exploring the color red in Ethiopian culture, from traditional clothing to landscapes.",
     detailedDescription:
       "This photographic series documents the significance of red in Ethiopian culture, capturing everything from traditional red clothing and ceremonial objects to natural red landscapes and architectural elements. Contains 7 striking photographs that reveal the deep cultural meanings and emotional associations of this powerful color.",
-    image: "/placeholder.svg?height=600&width=800&text=In+Red+Archive",
+    image: "/images/webp/05_Archive/a1.webp?height=600&width=800&text=In+Red+Archive",
     featured: false,
     awards: [],
     visitors: "6K",
@@ -480,7 +480,7 @@ const allProjectsData = [
     description: "Conceptual photographs imagining alternative realities and utopian visions of Ethiopian society.",
     detailedDescription:
       "This conceptual series creates visual portals to imagined versions of Ethiopia, exploring themes of possibility, hope, and alternative futures through surreal and dreamlike imagery. Features 4 conceptual photographs that challenge viewers to imagine different possibilities for Ethiopian society and culture.",
-    image: "/placeholder.svg?height=600&width=800&text=Portal+U-thiopia+Archive",
+    image: "/images/webp/05_Archive/04_Portal to Uthiopia/j.webp?height=600&width=800&text=Portal+U-thiopia+Archive",
     featured: false,
     awards: [],
     visitors: "5K",
@@ -499,7 +499,7 @@ const allProjectsData = [
     description: "An exploration of color in Ethiopian culture, from traditional dyes to contemporary color palettes.",
     detailedDescription:
       "This archive explores the rich color traditions of Ethiopian culture, documenting traditional dyeing techniques, ceremonial color usage, and contemporary interpretations of cultural color palettes. Contains 18 photographs that showcase the vibrant spectrum of Ethiopian artistic expression through color.",
-    image: "/placeholder.svg?height=600&width=800&text=Vibrant+Hues+Archive",
+    image: "/images/webp/05_Archive/08_vibrant hues/expt 1/a2.webp?height=600&width=800&text=Vibrant+Hues+Archive",
     featured: false,
     awards: [],
     visitors: "7K",
@@ -585,7 +585,7 @@ const allProjectsData = [
     description: "Collection of graphic design work including posters and visual identity projects.",
     detailedDescription:
       "This archive contains 5 graphic design projects including event posters and editorial work that explore Ethiopian cultural themes through contemporary design approaches. The collection demonstrates the application of traditional cultural elements within modern graphic design frameworks.",
-    image: "/placeholder.svg?height=600&width=800&text=Graphic+Posters+Archive",
+    image: "/images/webp/05_Archive/09_Graphic posters/04_Hulet neteb.webp?height=600&width=800&text=Graphic+Posters+Archive",
     featured: false,
     awards: [],
     visitors: "5K",
