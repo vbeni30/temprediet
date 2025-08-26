@@ -36,7 +36,7 @@ const installationProjects: InstallationProject[] = [
       "An immersive textile installation and film screening exploring the r/s between skin, fabric, and cultural identity in Eastern Ethiopia.",
     detailedDescription:
       "This large-scale installation features traditional textiles from Eastern Ethiopia arranged in a contemporary gallery context, creating dialogue between historical textile practices and modern artistic expression. The work transforms gallery space into a meditation on cultural memory and material heritage. Currently available for sale, this installation represents the culmination of extensive research into Ethiopian textile traditions.",
-    image: "/images/webp/02_Installations/01_sKINs_East Ethiopia textile installation/01_front.webp?height=600&width=800&text=sKINs+East+Ethiopia+Installation",
+    image: "/images/webp/02_Installations/01_sKINs_East_ Ethiopia_textile_installation/01_front.webp?height=600&width=800&text=sKINs+East+Ethiopia+Installation",
     position: "Textile Artist, Director, Producer, Cinematographer, Writer",
     materials: ["Traditional textiles", "Contemporary display systems", "Lighting", "Sound"],
     tags: ["textile", "identity", "cultural heritage", "for sale"],
