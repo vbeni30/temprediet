@@ -48,8 +48,8 @@ export default function ShopPage() {
       title: "Cargo Jacket",
       category: "clothing",
       price: "$320",
-      image: "/placeholder.svg?height=600&width=480&text=Cargo+Jacket",
-      hoverImage: "/images/webp/Shop/01_Cargo Jacket/1.webp?height=600&width=480&text=Jacket+Back+Panels",
+      image: "/images/webp/Shop/01_Cargo Jacket/1.webp?height=600&width=480&text=Cargo+Jacket",
+      hoverImage: "/placeholder.svg?height=600&width=480&text=Jacket+Back+Panels",
       available: true,
       linkedPhotos: "Kins of Abay.1/back panels",
       description:
