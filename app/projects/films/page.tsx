@@ -47,7 +47,7 @@ const filmProjects: FilmProject[] = [
       "A contemplative documentary about the relationship between communities and water sources in Ethiopia.",
     detailedDescription:
       "The River explores environmental conservation and water rights through intimate storytelling, examining how rivers shape both landscape and culture in Ethiopian communities. This film captures the essential role of water in Ethiopian life through compelling cinematography and personal narratives.",
-    image: "/placeholder.svg?height=600&width=800&text=The+River",
+    image: "/images/river.webp?height=600&width=800&text=The+River",
     location: "Ethiopia",
     tags: ["documentary", "environment", "water", "community"],
     videoUrl: "https://youtu.be/z_ijqn0ewM0?si=mbFQK0oZc8tatslH",
@@ -89,7 +89,7 @@ const filmProjects: FilmProject[] = [
     description: "A documentary series exploring Ethiopian legends and their contemporary relevance in modern society.",
     detailedDescription:
       "Decoding Legends is a documentary series that delves into the rich tapestry of Ethiopian folklore and mythology, examining how these ancient stories continue to shape contemporary Ethiopian identity and culture. Through interviews with elders, historians, and cultural practitioners, the series reveals the hidden meanings and enduring wisdom embedded in traditional legends.",
-    image: "/placeholder.svg?height=600&width=800&text=Decoding+Legends",
+    image: "/images/DecodingLegends.webp?height=600&width=800&text=Decoding+Legends",
     location: "Ethiopia",
     tags: ["documentary", "legends", "culture", "identity"],
     videoUrl: "https://youtu.be/0v1vwgnqHRU?si=uJkjUumPFlwMwHJy",
