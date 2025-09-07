@@ -61,7 +61,7 @@ const filmProjects: FilmProject[] = [
     description: "A collaborative film documenting the intersection of skateboarding culture and Ethiopian youth.",
     detailedDescription:
       "This collaborative film captures the vibrant skateboarding scene in Ethiopia, showcasing how young Ethiopians are embracing and redefining skateboarding culture within their own cultural context. The film follows several skaters as they navigate urban landscapes and create their own unique style.",
-    image: "/placeholder.svg?height=600&width=800&text=MSFTS+Ethiopia+Skate",
+    image: "/c4.webp?height=600&width=800&text=MSFTS+Ethiopia+Skate",
     location: "Addis Ababa, Ethiopia",
     tags: ["skateboarding", "youth culture", "collaboration", "urban"],
     videoUrl: "https://drive.google.com/file/d/1EguZ8WEBDYJItUhAVcpyyAoVgcxfwnMA/view?usp=sharing",
@@ -75,7 +75,7 @@ const filmProjects: FilmProject[] = [
     description: "An experimental film exploring the philosophical concept of duality in Ethiopian culture.",
     detailedDescription:
       "Hulet Neteb (meaning 'two things' in Amharic) examines the tensions and harmonies between tradition and modernity, individual and collective identity, past and present. Through innovative cinematographic techniques and thoughtful narrative structure, the film creates a meditative exploration of Ethiopian philosophical concepts.",
-    image: "/placeholder.svg?height=600&width=800&text=Hulet+Neteb",
+    image: "/images/05_Maya Sight_d.webp?height=600&width=800&text=Hulet+Neteb",
     location: "Ethiopia",
     tags: ["experimental", "philosophy", "duality", "culture"],
     videoUrl: "https://drive.google.com/file/d/1mF4sGEPb7YrYdEeUFYA2vZERRdR9F7G5/view?usp=sharing",
