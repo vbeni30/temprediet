@@ -61,7 +61,7 @@ const filmProjects: FilmProject[] = [
     description: "A collaborative film documenting the intersection of skateboarding culture and Ethiopian youth.",
     detailedDescription:
       "This collaborative film captures the vibrant skateboarding scene in Ethiopia, showcasing how young Ethiopians are embracing and redefining skateboarding culture within their own cultural context. The film follows several skaters as they navigate urban landscapes and create their own unique style.",
-    image: "/c4.webp?height=600&width=800&text=MSFTS+Ethiopia+Skate",
+    image: "images/c4.webp?height=600&width=800&text=MSFTS+Ethiopia+Skate",
     location: "Addis Ababa, Ethiopia",
     tags: ["skateboarding", "youth culture", "collaboration", "urban"],
     videoUrl: "https://drive.google.com/file/d/1EguZ8WEBDYJItUhAVcpyyAoVgcxfwnMA/view?usp=sharing",
