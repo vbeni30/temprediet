@@ -32,7 +32,7 @@ const filmProjects: FilmProject[] = [
     description: "A documentary exploring the textile traditions and cultural identity of Dire Dawa, Ethiopia.",
     detailedDescription:
       "sKINs: Dire Dawa is a documentary that delves into the intricate relationship between skin, fabric, and cultural memory in Eastern Ethiopia. This film explores how traditional textile practices continue to shape contemporary identity in Dire Dawa, examining the connections between personal and cultural narratives through the lens of textile heritage. Available through private Google Drive link.",
-    image: "/placeholder.svg?height=600&width=800&text=sKINs+Dire+Dawa",
+    image: "/images/webp/02_Installations/01_sKINs_East_Ethiopia_textile_installation/01_front.webp?height=600&width=800&text=sKINs+Dire+Dawa",
     location: "Dire Dawa, Ethiopia",
     tags: ["documentary", "textile", "culture", "identity"],
     videoUrl: "Private Google Drive link",
