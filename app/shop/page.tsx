@@ -34,7 +34,8 @@ export default function ShopPage() {
       title: "sKINs: Dire Dawa Textile Installation",
       category: "textile-art",
       price: "Email for Price",
-      image: "/images/webp/02_Installations/01_sKINs_East_Ethiopia_textile_installation/01_front.webp?height=600&width=480&text=Dire+Dawa+Installation",
+      image:
+        "/images/webp/02_Installations/01_sKINs_East_Ethiopia_textile_installation/01_front.webp?height=600&width=480&text=Dire+Dawa+Installation",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Installation+Detail",
       available: true,
       isEmailPrice: true,
@@ -47,7 +48,7 @@ export default function ShopPage() {
       id: 2,
       title: "Cargo Jacket",
       category: "clothing",
-      price: "$320",
+      price: "$230",
       image: "/images/webp/Shop/01_Cargo Jacket/1.webp?height=600&width=480&text=Cargo+Jacket",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Jacket+Back+Panels",
       available: true,
@@ -57,9 +58,9 @@ export default function ShopPage() {
     },
     {
       id: 3,
-      title: "Haori Kimono",
+      title: "Haori Jacket",
       category: "clothing",
-      price: "$280",
+      price: "$290",
       image: "/images/webp/Shop/02_Haori Kimono/Swapable.webp?height=600&width=480&text=Haori+Kimono",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Kimono+Panels",
       available: true,
@@ -71,7 +72,7 @@ export default function ShopPage() {
       id: 4,
       title: "Cargo Pants",
       category: "clothing",
-      price: "$220",
+      price: "$110",
       image: "/images/webp/Shop/03_Cargo Pants/a3.webp?height=600&width=480&text=Cargo+Pants",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Swappable+Panels",
       available: true,
@@ -81,10 +82,11 @@ export default function ShopPage() {
     },
     {
       id: 5,
-      title: "sKINs Collection",
+      title: "Sheret Shirt",
       category: "clothing",
-      price: "$45 - $120",
-      image: "/images/webp/Shop/04_skins_to be adjusted/red-skins-all_01.webp?height=600&width=480&text=sKINs+Collection",
+      price: "$70",
+      image:
+        "/images/webp/Shop/04_skins_to be adjusted/red-skins-all_01.webp?height=600&width=480&text=sKINs+Collection",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Collection+Variety",
       available: true,
       description:
@@ -93,10 +95,11 @@ export default function ShopPage() {
     },
     {
       id: 6,
-      title: "Sheret Project",
+      title: "Skins Pack",
       category: "clothing",
-      price: "$180 - $450",
-      image: "/images/webp/Shop/05_Sheret Project/sheret shirts/Sheret 09.webp?height=600&width=480&text=Sheret+Project",
+      price: "$70",
+      image:
+        "/images/webp/Shop/05_Sheret Project/sheret shirts/Sheret 09.webp?height=600&width=480&text=Sheret+Project",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Reversible+Design",
       available: true,
       description:
@@ -107,10 +110,10 @@ export default function ShopPage() {
       id: 7,
       title: "Angel Eyes",
       category: "clothing",
-      price: "$350 - $520",
+      price: "Currently Sold Out",
       image: "/placeholder.svg?height=600&width=480&text=Angel+Eyes",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Hand+Painted+Detail",
-      available: true,
+      available: false,
       description:
         "Artisanal jackets and vests featuring hand-painted designs and intricate embroidery. Each piece is unique and tells its own visual story.",
       subcategory: "Hand painted/embroidered jackets and vests",
@@ -119,10 +122,10 @@ export default function ShopPage() {
       id: 8,
       title: "Hulet Neteb Jackets",
       category: "clothing",
-      price: "$380",
+      price: "Currently Sold Out",
       image: "/placeholder.svg?height=600&width=480&text=Hulet+Neteb",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Capsule+Collection",
-      available: true,
+      available: false,
       description:
         "Limited capsule collection of structured jackets combining traditional Ethiopian motifs with contemporary tailoring techniques.",
       subcategory: "capsule collection",
@@ -136,7 +139,7 @@ export default function ShopPage() {
       price: "$15 - $35",
       image: "/placeholder.svg?height=600&width=480&text=Ethiopia+Posters",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Postcard+Collection",
-      available: true,
+      available: false,
       description:
         "Beautiful collection of posters and postcards celebrating Ethiopian culture, landscapes, and traditions. Perfect for home decoration or sharing with friends.",
     },
@@ -147,7 +150,7 @@ export default function ShopPage() {
       price: "$12",
       image: "/placeholder.svg?height=600&width=480&text=Red+Sticker+Set",
       hoverImage: "/placeholder.svg?height=600&width=480&text=Sticker+Details",
-      available: true,
+      available: false,
       description:
         "Curated set of red-themed stickers featuring cultural symbols, patterns, and artistic elements. High-quality vinyl stickers perfect for personalizing your belongings.",
     },

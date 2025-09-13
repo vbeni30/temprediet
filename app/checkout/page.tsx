@@ -1,15 +1,25 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, Phone, Mail, MapPin, Copy, CheckCircle } from "lucide-react"
+import { ArrowLeft, Phone, Mail, MapPin, Copy, CheckCircle, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useCart } from "@/lib/cart-context"
 
 export default function CheckoutPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [copiedAccount, setCopiedAccount] = useState<string | null>(null)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const { state } = useCart()
 
   useEffect(() => {
@@ -60,6 +70,79 @@ export default function CheckoutPage() {
       icon: "🏦",
     },
   ]
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      const orderSummary = state.items
+        .map(
+          (item) =>
+            `${item.title} (${item.category}) - Qty: ${item.quantity} - ${item.price}${item.selectedPanel ? ` - Panel: ${item.selectedPanel}` : ""}`,
+        )
+        .join("\n")
+
+      const formDataToSend = new FormData()
+      formDataToSend.append("access_key", "68382b11-7f75-471a-bbc0-a008f5751b03")
+      formDataToSend.append("name", formData.name)
+      formDataToSend.append("email", formData.email)
+      formDataToSend.append("phone", formData.phone)
+      formDataToSend.append("subject", `Order Confirmation - Total: $${total.toFixed(2)}`)
+      formDataToSend.append("from_name", "Red Suk Order System")
+      formDataToSend.append("replyto", formData.email)
+      formDataToSend.append("redirect", "https://web3forms.com/success")
+      formDataToSend.append("botcheck", "")
+      formDataToSend.append(
+        "message",
+        `Customer Name: ${formData.name}
+Customer Email: ${formData.email}
+Customer Phone: ${formData.phone}
+
+Order Details:
+${formData.message}
+
+--- ORDER SUMMARY ---
+${orderSummary}
+
+Subtotal: $${getSubtotal().toLocaleString()}
+Shipping: $${shipping}
+Tax: $${tax.toFixed(2)}
+Total: $${total.toFixed(2)}
+
+This is an automated order confirmation from Red Suk online store.`,
+      )
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      const result = await response.json()
+
+      if (response.ok && result.success) {
+        setSubmitStatus("success")
+        setFormData({ name: "", email: "", phone: "", message: "" })
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }))
+  }
 
   if (isLoading) {
     return <div className="min-h-screen bg-white" />
@@ -152,6 +235,118 @@ export default function CheckoutPage() {
                 </ol>
               </div>
 
+              {/* Order Confirmation Contact Form */}
+              <div className="space-y-6">
+                <h2 className="text-2xl font-medium text-black">Order Confirmation Form</h2>
+                <div className="p-6 rounded-lg border border-blue-300 bg-blue-50">
+                  <h3 className="font-medium mb-4 text-blue-800">📧 Send Order Confirmation</h3>
+                  <p className="text-sm text-blue-700 mb-6">
+                    Use this form to send your order details and payment confirmation directly to our team. We'll
+                    respond within 24 hours to confirm your order.
+                  </p>
+
+                  <form onSubmit={handleFormSubmit} className="space-y-4">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-blue-800 mb-1">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-3 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="Your full name"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-blue-800 mb-1">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-3 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="your@email.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-blue-800 mb-1">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="+251-911-123456"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-blue-800 mb-1">
+                        Message & Payment Confirmation *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
+                        rows={4}
+                        className="w-full px-3 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Please include details about your payment method, transaction reference, and any special instructions..."
+                      />
+                    </div>
+
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center gap-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="h-4 w-4" />
+                          Send Order Confirmation
+                        </>
+                      )}
+                    </Button>
+
+                    {submitStatus === "success" && (
+                      <div className="p-3 rounded-md bg-green-100 border border-green-300">
+                        <p className="text-sm text-green-700">
+                          ✅ Order confirmation sent successfully! We'll respond within 24 hours.
+                        </p>
+                      </div>
+                    )}
+
+                    {submitStatus === "error" && (
+                      <div className="p-3 rounded-md bg-red-100 border border-red-300">
+                        <p className="text-sm text-red-700">
+                          ❌ Failed to send message. Please try again or contact us directly.
+                        </p>
+                      </div>
+                    )}
+                  </form>
+                </div>
+              </div>
+
               {/* Contact Information */}
               <div className="space-y-6">
                 <h2 className="text-2xl font-medium text-black">Contact Information</h2>
@@ -188,7 +383,7 @@ export default function CheckoutPage() {
 
               {/* Important Note */}
               <div className="p-6 rounded-lg border border-red-300 bg-red-50">
-                <h3 className="font-medium mb-3 text-red-800">⚠�� Important Note</h3>
+                <h3 className="font-medium mb-3 text-red-800">⚠️ Important Note</h3>
                 <p className="text-sm text-red-700">
                   Please ensure you send a screenshot of your transfer receipt to complete your order. Orders without
                   payment confirmation will not be processed. For any questions or issues, contact us immediately using

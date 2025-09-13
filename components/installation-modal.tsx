@@ -739,51 +739,50 @@ export function InstallationModal({ project, isOpen, onClose }: InstallationModa
             <div className="w-full h-full p-6 overflow-y-auto flex items-center justify-center">
               {currentSlide.gridType === "2x2" && (
                 <div className="flex justify-center items-center h-full">
-                  <div className="grid grid-cols-3 gap-x-1 gap-y-2 max-h-[85vh] w-fit ml-4">
+                  <div className="grid grid-cols-3 gap-4 max-h-[85vh] w-fit">
                     {project.id === "tilla-photoshoot" ? (
                       <>
-                        {/* Left vertical image */}
+                        {/* First row - three portrait images (9:16 aspect ratio) */}
                         <div className="relative overflow-hidden rounded-lg bg-neutral-100 aspect-[9/16] h-[70vh]">
                           <img
                             src={currentSlide.images[0] || "/placeholder.svg"}
-                            alt={`${currentSlide.title} Vertical 1`}
+                            alt={`${currentSlide.title} Portrait 1`}
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                             loading="lazy"
-                            sizes="(max-width: 768px) 50vw, 25vw"
+                            sizes="(max-width: 768px) 33vw, 25vw"
                           />
                         </div>
 
-                        {/* Center column with 2 horizontal images stacked closely */}
-                        <div className="space-y-1 flex flex-col justify-center">
-                          <div className="relative overflow-hidden rounded-lg bg-neutral-100 aspect-[21/9] h-[40vh]">
-                            <img
-                              src={currentSlide.images[1] || "/placeholder.svg"}
-                              alt={`${currentSlide.title} Horizontal 1`}
-                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                              loading="lazy"
-                              sizes="(max-width: 768px) 50vw, 25vw"
-                            />
-                          </div>
-                          <div className="relative overflow-hidden rounded-lg bg-neutral-100 aspect-[21/9] h-[40vh]">
-                            <img
-                              src={currentSlide.images[2] || "/placeholder.svg"}
-                              alt={`${currentSlide.title} Horizontal 2`}
-                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                              loading="lazy"
-                              sizes="(max-width: 768px) 50vw, 25vw"
-                            />
-                          </div>
-                        </div>
-
-                        {/* Right vertical image */}
                         <div className="relative overflow-hidden rounded-lg bg-neutral-100 aspect-[9/16] h-[70vh]">
                           <img
-                            src={currentSlide.images[3] || "/placeholder.svg"}
-                            alt={`${currentSlide.title} Vertical 2`}
+                            src={currentSlide.images[1] || "/placeholder.svg"}
+                            alt={`${currentSlide.title} Portrait 2`}
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                             loading="lazy"
-                            sizes="(max-width: 768px) 50vw, 25vw"
+                            sizes="(max-width: 768px) 33vw, 25vw"
                           />
+                        </div>
+
+                        <div className="relative overflow-hidden rounded-lg bg-neutral-100 aspect-[9/16] h-[70vh]">
+                          <img
+                            src={currentSlide.images[2] || "/placeholder.svg"}
+                            alt={`${currentSlide.title} Portrait 3`}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                            sizes="(max-width: 768px) 33vw, 25vw"
+                          />
+                        </div>
+
+                        <div className="col-span-3 flex justify-center mt-4">
+                          <div className="relative overflow-hidden rounded-lg bg-neutral-100 aspect-video w-2/3">
+                            <img
+                              src={currentSlide.images[3] || "/placeholder.svg"}
+                              alt={`${currentSlide.title} Landscape 1`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                              sizes="(max-width: 768px) 66vw, 50vw"
+                            />
+                          </div>
                         </div>
                       </>
                     ) : (
@@ -832,22 +831,11 @@ export function InstallationModal({ project, isOpen, onClose }: InstallationModa
                 </div>
               )}
               {currentSlide.gridType === "3x3-mixed" && (
-                <div className="grid grid-cols-3 gap-4 h-full max-h-[85vh]">
-                  {currentSlide.images.map((image, index) => {
-                    let aspectRatio = "aspect-[4/3]" // Default
-
-                    if (project.id === "in-red-photos-archive") {
-                      if (index === 0) {
-                        aspectRatio = "aspect-square" // in red 1
-                      } else if ([1, 2, 6].includes(index)) {
-                        aspectRatio = "aspect-[9/16]" // in red 2, 3, 7
-                      } else if (index === 3) {
-                        aspectRatio = "aspect-[4/3]" // in red 4
-                      }
-                    }
-
-                    return (
-                      <div key={index} className={`${aspectRatio} relative overflow-hidden rounded-lg bg-neutral-100`}>
+                <div className="flex flex-col gap-4 h-full overflow-y-auto">
+                  {/* First row: 3 portrait images filling viewport height */}
+                  <div className="grid grid-cols-3 gap-4 h-[70vh] flex-shrink-0">
+                    {currentSlide.images.slice(0, 3).map((image, index) => (
+                      <div key={index} className="aspect-[9/16] relative overflow-hidden rounded-lg bg-neutral-100">
                         <img
                           src={image || "/placeholder.svg"}
                           alt={`${currentSlide.title} ${index + 1}`}
@@ -855,10 +843,56 @@ export function InstallationModal({ project, isOpen, onClose }: InstallationModa
                           loading="lazy"
                         />
                       </div>
-                    )
-                  })}
+                    ))}
+                  </div>
+
+                  {/* Second row: 1 square + 2 landscape images */}
+                  <div className="grid grid-cols-3 gap-4 h-[35vh] flex-shrink-0">
+                    {/* Square image taking 1 column */}
+                    <div className="aspect-square relative overflow-hidden rounded-lg bg-neutral-100">
+                      <img
+                        src={currentSlide.images[3] || "/placeholder.svg"}
+                        alt={`${currentSlide.title} 4`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    {/* Two landscape images stacked in remaining 2 columns */}
+                    <div className="col-span-2 grid grid-rows-2 gap-4">
+                      <div className="aspect-[16/9] relative overflow-hidden rounded-lg bg-neutral-100">
+                        <img
+                          src={currentSlide.images[4] || "/placeholder.svg"}
+                          alt={`${currentSlide.title} 5`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="aspect-[16/9] relative overflow-hidden rounded-lg bg-neutral-100">
+                        <img
+                          src={currentSlide.images[5] || "/placeholder.svg"}
+                          alt={`${currentSlide.title} 6`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Third row: 1 centered landscape image */}
+                  <div className="flex justify-center">
+                    <div className="w-2/3 aspect-[16/9] relative overflow-hidden rounded-lg bg-neutral-100">
+                      <img
+                        src={currentSlide.images[6] || "/placeholder.svg"}
+                        alt={`${currentSlide.title} 7`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
                 </div>
               )}
+
               {currentSlide.gridType === "1x4-portrait" && (
                 <div className="flex justify-center items-center h-full">
                   <div className="grid grid-cols-4 gap-4 w-fit">

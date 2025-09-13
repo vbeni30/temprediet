@@ -84,9 +84,9 @@ const archiveProjects: Project[] = [
     photoCount: 4,
     images: [
       "/images/webp/05_Archive/02_tilla photoshoot/a2.webp", 
-      "/images/webp/05_Archive/02_tilla photoshoot/a1.webp", 
       "/images/webp/05_Archive/02_tilla photoshoot/a3.webp", 
       "/images/webp/05_Archive/02_tilla photoshoot/a4.webp", 
+      "/images/webp/05_Archive/02_tilla photoshoot/a1.webp", 
     ],
   },
   {
