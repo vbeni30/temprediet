@@ -84,19 +84,19 @@ export default function CheckoutPage() {
         )
         .join("\n")
 
-      const formDataToSend = new FormData()
-      formDataToSend.append("access_key", "68382b11-7f75-471a-bbc0-a008f5751b03")
-      formDataToSend.append("name", formData.name)
-      formDataToSend.append("email", formData.email)
-      formDataToSend.append("phone", formData.phone)
-      formDataToSend.append("subject", `Order Confirmation - Total: $${total.toFixed(2)}`)
-      formDataToSend.append("from_name", "Red Suk Order System")
-      formDataToSend.append("replyto", formData.email)
-      formDataToSend.append("redirect", "https://web3forms.com/success")
-      formDataToSend.append("botcheck", "")
-      formDataToSend.append(
-        "message",
-        `Customer Name: ${formData.name}
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "68382b11-7f75-471a-bbc0-a008f5751b03",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: `New Order Confirmation - Total: $${total.toFixed(2)}`,
+          message: `Customer Name: ${formData.name}
 Customer Email: ${formData.email}
 Customer Phone: ${formData.phone}
 
@@ -112,25 +112,24 @@ Tax: $${tax.toFixed(2)}
 Total: $${total.toFixed(2)}
 
 This is an automated order confirmation from Red Suk online store.`,
-      )
-
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formDataToSend,
-        headers: {
-          Accept: "application/json",
-        },
+          from_name: "Red Suk Order System",
+          replyto: formData.email,
+          botcheck: "",
+        }),
       })
 
       const result = await response.json()
+      console.log("[v0] Form submission result:", result)
 
       if (response.ok && result.success) {
         setSubmitStatus("success")
         setFormData({ name: "", email: "", phone: "", message: "" })
       } else {
+        console.log("[v0] Form submission failed:", result)
         setSubmitStatus("error")
       }
     } catch (error) {
+      console.log("[v0] Form submission error:", error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
